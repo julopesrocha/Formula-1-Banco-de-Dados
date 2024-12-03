@@ -1,10 +1,16 @@
+import json
 import pandas as pd
 import mysql.connector
 
-HOST = "localhost"
-USER = "root"
-PASSWORD = "joao3v16"
-DATABASE = "F1"
+# Carregar o arquivo de configuração
+with open('config.json') as f:
+    config = json.load(f)
+
+HOST = config['MYSQL_HOST']
+USER = config['MYSQL_USER']
+PASSWORD = config['MYSQL_PASSWORD']
+DATABASE = config['MYSQL_DATABASE']
+
 
 class f1:
     def __init__(self):

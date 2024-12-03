@@ -1,6 +1,7 @@
 <template>
     <div class="consulta">
       <h2>{{ title }}</h2>
+      <h3>{{ description }}</h3>
       <table>
         <thead>
           <tr>
@@ -21,6 +22,7 @@
     props: {
       data: { type: Array, default: () => [] },
       title: { type: String, default: "" },
+      description: { type: String, default: "" },
     },
     computed: {
       headers() {
